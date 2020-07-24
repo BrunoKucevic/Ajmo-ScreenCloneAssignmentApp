@@ -92,6 +92,7 @@
 		9363211724C86F6C00C0F87A /* Ajmo!ScreenCloneAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				93998D2524CB1F4C00655BF3 /* Third party helper */,
 				9363214B24C9B49F00C0F87A /* Services */,
 				9363214424C8ACDE00C0F87A /* Extension */,
 				9363212E24C8719500C0F87A /* Controller */,
@@ -119,8 +120,6 @@
 		9363212D24C8719000C0F87A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93998D2124CAC80F00655BF3 /* UPCarouselFlowLayout.swift */,
-				9363213624C8762600C0F87A /* MainScreenViewController.swift */,
 				9363212F24C871A600C0F87A /* Coordinator */,
 				9363213424C875D500C0F87A /* MainScreenViewController.storyboard */,
 				9363214024C8A9DC00C0F87A /* ReusableCollectionViewCell.swift */,
@@ -134,6 +133,7 @@
 		9363212E24C8719500C0F87A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9363213624C8762600C0F87A /* MainScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +167,14 @@
 				9363215024C9B52100C0F87A /* AppDataHandler.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		93998D2524CB1F4C00655BF3 /* Third party helper */ = {
+			isa = PBXGroup;
+			children = (
+				93998D2124CAC80F00655BF3 /* UPCarouselFlowLayout.swift */,
+			);
+			path = "Third party helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
