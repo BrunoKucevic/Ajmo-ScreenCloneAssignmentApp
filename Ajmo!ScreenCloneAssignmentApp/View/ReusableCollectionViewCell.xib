@@ -64,8 +64,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHI-LP-IOr">
-                                        <rect key="frame" x="149.66666666666666" y="266" width="29.666666666666657" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHI-LP-IOr">
+                                        <rect key="frame" x="109.66666666666667" y="266" width="29.666666666666671" height="15"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="K27-qq-xWK"/>
@@ -80,9 +80,9 @@
                                     <constraint firstItem="SNP-YL-XFL" firstAttribute="top" secondItem="ygY-XD-JYD" secondAttribute="bottom" constant="8" id="1TY-xc-NsK"/>
                                     <constraint firstAttribute="trailing" secondItem="ygY-XD-JYD" secondAttribute="trailing" constant="20" id="5R0-Re-Usk"/>
                                     <constraint firstItem="YxU-bj-p5h" firstAttribute="top" secondItem="g2r-1A-zCf" secondAttribute="top" id="7O5-0h-16u"/>
-                                    <constraint firstItem="FHI-LP-IOr" firstAttribute="leading" secondItem="UKK-ok-rwb" secondAttribute="trailing" constant="100" id="BWz-pB-Uln"/>
+                                    <constraint firstItem="FHI-LP-IOr" firstAttribute="leading" secondItem="UKK-ok-rwb" secondAttribute="trailing" constant="60" id="BWz-pB-Uln"/>
                                     <constraint firstItem="ygY-XD-JYD" firstAttribute="leading" secondItem="g2r-1A-zCf" secondAttribute="leading" constant="20" id="COO-7i-4vl"/>
-                                    <constraint firstItem="FHI-LP-IOr" firstAttribute="leading" secondItem="UKK-ok-rwb" secondAttribute="trailing" constant="100" id="F7W-kP-suk"/>
+                                    <constraint firstItem="FHI-LP-IOr" firstAttribute="leading" secondItem="UKK-ok-rwb" secondAttribute="trailing" constant="60" id="F7W-kP-suk"/>
                                     <constraint firstItem="YxU-bj-p5h" firstAttribute="leading" secondItem="g2r-1A-zCf" secondAttribute="leading" id="MzF-30-Pbf"/>
                                     <constraint firstItem="SNP-YL-XFL" firstAttribute="leading" secondItem="g2r-1A-zCf" secondAttribute="leading" constant="20" id="PbK-Ay-5Y7"/>
                                     <constraint firstItem="FHI-LP-IOr" firstAttribute="top" secondItem="SNP-YL-XFL" secondAttribute="bottom" constant="10" id="T1b-V9-3wY"/>

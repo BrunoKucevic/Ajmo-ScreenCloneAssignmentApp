@@ -68,4 +68,9 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         return CGSize(width: 300, height: 300)
     }
     
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 0, left: 35, bottom: 0, right: 35)
+    }
 }

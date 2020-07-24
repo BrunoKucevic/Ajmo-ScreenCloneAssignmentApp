@@ -51,7 +51,7 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         self.title.text = model.title
         self.caption.text! = model.caption
         if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
-            self.linkType.text = "event"
+            self.linkType.text = "Event"
         }else{
             self.linkType.text = model.links[0].linkType.rawValue
         }
