@@ -9,7 +9,7 @@
 import UIKit
 
 class ReusableCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var mainview: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var title: UILabel!
@@ -30,7 +30,7 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.imgView.image = nil
+        //self.imgView.image = nil
         self.linkType.text = "event"
     }
     
@@ -41,9 +41,9 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         mainview.layer.shadowRadius = 2.0
         mainview.layer.shadowOpacity = 0.5
         mainview.layer.masksToBounds = false
-//        imgView.layer.cornerRadius = mainview.layer.cornerRadius / 10
-//        imgView.clipsToBounds = true
-    
+        //        imgView.layer.cornerRadius = mainview.layer.cornerRadius / 10
+        //        imgView.clipsToBounds = true
+        
         self.clipsToBounds = true
     }
     
@@ -56,7 +56,12 @@ class ReusableCollectionViewCell: UICollectionViewCell {
             self.linkType.text = model.links[0].linkType.rawValue
         }
         self.createdAt.text = "Published: " + model.createdAt.toDay
-        guard let image = model.imageURL else {return}
-        self.imgView.downloaded(from: image)
+        if let image = model.imageURL{
+            self.imgView.downloaded(from: image)
+        }
+        else {
+            self.imgView.image = UIImage(named: "default")
+        }
+        
     }
 }
