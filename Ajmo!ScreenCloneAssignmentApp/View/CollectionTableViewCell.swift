@@ -1,0 +1,71 @@
+//
+//  CollectionTableViewCell.swift
+//  Ajmo!ScreenCloneAssignmentApp
+//
+//  Created by Bruno Kucevic on 23/07/2020.
+//  Copyright © 2020 Bruno Kucevic. All rights reserved.
+//
+
+import UIKit
+
+class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    static let identifier = "CollectionTableViewCell"
+    static func nib() -> UINib{
+        return UINib(nibName: "CollectionTableViewCell", bundle: nil)
+    }
+    var models: [Data]?
+    @IBOutlet var collectionView: UICollectionView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        collectionView.register(ReusableCollectionViewCell.nib(), forCellWithReuseIdentifier: ReusableCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        setupFlowLayout()
+
+    }
+    
+    
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    private func setupFlowLayout(){
+        let flowLayout = UPCarouselFlowLayout()
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width, height: collectionView.frame.size.height)
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sideItemScale = 0.8
+        flowLayout.sideItemAlpha = 1.0
+        flowLayout.spacingMode = .fixed(spacing: 40.0)
+        collectionView.collectionViewLayout = flowLayout
+        collectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    func configure(for models: [Data]){
+        self.models = models
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return models?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReusableCollectionViewCell.identifier, for: indexPath) as! ReusableCollectionViewCell
+        if let safeModel = models?[indexPath.row] {
+            cell.configure(for: safeModel)
+        }else{
+            print("error")
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 300, height: 300)
+    }
+    
+}
