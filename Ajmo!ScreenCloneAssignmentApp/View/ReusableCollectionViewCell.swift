@@ -37,7 +37,7 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     }
     
     private func setup(){
-        imgView.layer.cornerRadius = imgView.layer.cornerRadius / 10
+        imgView.layer.cornerRadius = imgView.frame.height / 10
         imgView.clipsToBounds = true
         mainview.layer.cornerRadius = mainview.frame.height / 10
         mainview.layer.shadowColor = UIColor.black.cgColor
@@ -46,9 +46,7 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         mainview.layer.shadowOpacity = 0.5
         //mainview.layer.masksToBounds = true
         imgView.layer.masksToBounds = true
-//        imgView.layer.cornerRadius = imgView.layer.cornerRadius / 10
-//        imgView.clipsToBounds = true
-        //dontMissThis.layer.cornerRadius = dontMissThis.frame.height / 20
+        dontMissThis.layer.cornerRadius = 20//dontMissThis.frame.height / 20
         
         //self.clipsToBounds = true
     }
@@ -58,7 +56,11 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         self.title.text = model.title
         self.caption.text! = model.caption
         
-        self.dontMissThis.isHidden = model.isHighlighted
+        
+        if model.isHighlighted{
+            self.dontMissThis.isHidden = false
+        }
+        
         if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
             self.linkType.text = "Event"
         }else{
