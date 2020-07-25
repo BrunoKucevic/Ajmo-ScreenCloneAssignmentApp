@@ -16,6 +16,8 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var linkType: UILabel!
     @IBOutlet weak var createdAt: UILabel!
+    @IBOutlet weak var dontMissThis: UILabel!
+    
     
     
     static let identifier = "ReusableCollectionViewCell"
@@ -31,25 +33,32 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         //self.imgView.image = nil
-        self.linkType.text = "event"
+        //self.linkType.text = "event"
     }
     
     private func setup(){
+        imgView.layer.cornerRadius = imgView.layer.cornerRadius / 10
+        imgView.clipsToBounds = true
         mainview.layer.cornerRadius = mainview.frame.height / 10
         mainview.layer.shadowColor = UIColor.black.cgColor
         mainview.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         mainview.layer.shadowRadius = 2.0
         mainview.layer.shadowOpacity = 0.5
-        mainview.layer.masksToBounds = false
-        //        imgView.layer.cornerRadius = mainview.layer.cornerRadius / 10
-        //        imgView.clipsToBounds = true
+        //mainview.layer.masksToBounds = true
+        imgView.layer.masksToBounds = true
+//        imgView.layer.cornerRadius = imgView.layer.cornerRadius / 10
+//        imgView.clipsToBounds = true
+        //dontMissThis.layer.cornerRadius = dontMissThis.frame.height / 20
         
-        self.clipsToBounds = true
+        //self.clipsToBounds = true
     }
     
     public func configure(for model: Data){
+        dontMissThis.isHidden = true
         self.title.text = model.title
         self.caption.text! = model.caption
+        
+        self.dontMissThis.isHidden = model.isHighlighted
         if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
             self.linkType.text = "Event"
         }else{

@@ -73,4 +73,14 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 0, left: 35, bottom: 0, right: 35)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) else {return}
+        cell.alpha = 0.8
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            cell.alpha = 1
+        }
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 }
