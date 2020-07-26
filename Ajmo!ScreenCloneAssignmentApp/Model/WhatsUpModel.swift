@@ -30,8 +30,8 @@ struct WhatsUpModel: Codable {
 }
 
 // MARK: - Datum
-struct Data: Codable {
-    let id: Int
+struct Data: Codable, DataGettable {
+    let id: Int = 0
     let links: [Link]
     let imageURL: String?
     let shareLink: String
@@ -46,6 +46,26 @@ struct Data: Codable {
     let highlightedGradientColorFirst: HighlightedGradientColorFirst
     let highlightedGradientColorSecond: HighlightedGradientColorSecond
     let title, datumDescription: String
+//    var linkType : String
+//    var picture: String
+    
+    var linkType: String{
+//        if let links = self.posterPath{
+//            return imgBaseUrl + posterPath
+//        }
+//
+//        else {return nil}
+        return ""
+    }
+    
+    var picture: String{
+//        if let posterPath = self.posterPath{
+//            return imgBaseUrlBig + posterPath
+//        }
+//
+//        else {return nil}
+        return ""
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, links

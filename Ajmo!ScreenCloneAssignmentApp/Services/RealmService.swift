@@ -17,7 +17,7 @@ class RealmService {
     func save<T: Object>(_ object : T){
         do {
             try realm.write{
-                realm.add(object)
+                realm.add(object, update: .modified)
             }
         } catch  {
             print(error)

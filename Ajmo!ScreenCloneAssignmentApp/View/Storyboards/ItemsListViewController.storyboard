@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Saved Items View Controller-->
+        <!--Items List View Controller-->
         <scene sceneID="OZw-ho-ndi">
             <objects>
-                <viewController storyboardIdentifier="SavedItemsViewController" id="TLo-zU-TAS" customClass="SavedItemsViewController" customModule="Ajmo_ScreenCloneAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemsListViewController" id="TLo-zU-TAS" customClass="ItemsListViewController" customModule="Ajmo_ScreenCloneAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HBK-QZ-w6O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VPz-E1-zrW"/>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="LSi-bN-8nI" id="mU2-5b-uTP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWY-91-9pm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

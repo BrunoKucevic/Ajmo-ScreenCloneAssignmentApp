@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AA25D8C8-F908-4B7B-98AD-B5D883F0E436"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AB07C02-566B-4DE3-A8CA-6D462D56B804"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/View/CollectionTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34251DE9-E293-4233-9340-C0CAFA3B2EE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "tableView(_:viewForHeaderInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C0D13B1-2E99-4883-8243-DA859B3C2094"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/View/HeaderCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AB8F2A3-CFE5-412C-A775-8CEA5EE36FE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/View/HeaderCellTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "btnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7222288F-2F1D-4D2E-96D2-93E432E0BDBF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/View/HeaderView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "commonInit()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3DEA445-3277-4F18-9A87-E85B02BC435D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/View/Empty.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "btnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63BF9C35-0367-4F23-B361-AFCB14B44BB2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "btnClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B202FA9-97BC-4080-9238-B7089D9D5C67"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB604EF3-F940-482F-A15F-EEBDAFB39B71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getData(pageNumber:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FDE2C96-956F-4CE8-B501-4652A28E3C1D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getData(pageNumber:callBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5FDE2C96-956F-4CE8-B501-4652A28E3C1D - e6c1c4b1c40d7db9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Ajmo_ScreenCloneAssignmentApp.WhatsUpModel, Ajmo_ScreenCloneAssignmentApp.RequestError&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.AppDataHandler.getData(callBack: (Swift.Array&lt;Ajmo_ScreenCloneAssignmentApp.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  uuid = "5FDE2C96-956F-4CE8-B501-4652A28E3C1D - e6c1c4b1c40d7db9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Ajmo_ScreenCloneAssignmentApp.WhatsUpModel, Ajmo_ScreenCloneAssignmentApp.RequestError&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.AppDataHandler.getData(callBack: (Swift.Array&lt;Ajmo_ScreenCloneAssignmentApp.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  uuid = "5FDE2C96-956F-4CE8-B501-4652A28E3C1D - e6c1c4b1c40d7db9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Ajmo_ScreenCloneAssignmentApp.WhatsUpModel, Ajmo_ScreenCloneAssignmentApp.RequestError&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.AppDataHandler.getData(callBack: (Swift.Array&lt;Ajmo_ScreenCloneAssignmentApp.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "542">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54BEB48C-A9D1-46C6-A16C-DB52D8764823"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetch(urlString:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54BEB48C-A9D1-46C6-A16C-DB52D8764823 - bd3c2a869e02799e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Ajmo_ScreenCloneAssignmentApp.JSONParser.fetch&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(urlString: Swift.String, completionHandler: (Swift.Result&lt;A, Ajmo_ScreenCloneAssignmentApp.RequestError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "393">
+               </Location>
+               <Location
+                  uuid = "54BEB48C-A9D1-46C6-A16C-DB52D8764823 - dd0e3f6e0891f752"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.JSONParser.fetch&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(urlString: Swift.String, completionHandler: (Swift.Result&lt;A, Ajmo_ScreenCloneAssignmentApp.RequestError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "340">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B3E06BA-5409-471B-A76C-0F18BD661CB5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetch(urlString:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D492371-4A41-4CD9-97EC-4A15C82DD01D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetch(urlString:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EB173E2-1F2F-4B5A-BF45-2C09C003472C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/JSONParser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetch(urlString:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61A618B2-7BED-4530-B42E-59E476565B7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getData(pageNumber:callBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEA1B9AD-DF99-4246-81C9-2D143C93598C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "437C665A-6218-4495-81ED-85ACAE64D053"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "437C665A-6218-4495-81ED-85ACAE64D053 - 4e1fa234e474a9f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Array&lt;Ajmo_ScreenCloneAssignmentApp.DataGettable&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.MainScreenViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "437C665A-6218-4495-81ED-85ACAE64D053 - 9826e4ae28246dd9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Ajmo_ScreenCloneAssignmentApp.DataGettable) -&gt; () in closure #1 () -&gt; () in closure #1 (Swift.Array&lt;Ajmo_ScreenCloneAssignmentApp.DataGettable&gt;) -&gt; () in Ajmo_ScreenCloneAssignmentApp.MainScreenViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Ajmo!ScreenCloneAssignmentApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Brunokucevic/Desktop/SwiftProjects/Ajmo!ScreenCloneAssignmentApp/Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D22CAB69-62E5-44BA-88D5-37CCECB07DDE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "797243B5-D11E-4E33-A64D-CC9F788BD534"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA1B6272-BDA4-4F4B-9296-57D2491C59EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/MainScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "btnClicked()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30DA6C05-2A3B-4736-A59F-811EE636BD5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/ItemsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0675FC3E-D33E-4356-A417-9DA2ABCD41FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/ItemsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FF76D34-F189-45B2-8F47-7577E26115E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ajmo!ScreenCloneAssignmentApp/Controller/ItemsListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

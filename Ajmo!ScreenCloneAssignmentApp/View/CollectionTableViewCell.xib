@@ -28,10 +28,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="EAU-Cb-rIR" secondAttribute="trailing" constant="5" id="7tt-vh-Xk0"/>
-                    <constraint firstItem="EAU-Cb-rIR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="8d7-9w-Shz"/>
-                    <constraint firstItem="EAU-Cb-rIR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="G3K-WT-87x"/>
-                    <constraint firstAttribute="bottom" secondItem="EAU-Cb-rIR" secondAttribute="bottom" constant="5" id="LNy-7e-6Mq"/>
+                    <constraint firstItem="EAU-Cb-rIR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="W9u-mv-kqD"/>
+                    <constraint firstAttribute="bottom" secondItem="EAU-Cb-rIR" secondAttribute="bottom" constant="5" id="eMg-x8-OyM"/>
+                    <constraint firstAttribute="trailing" secondItem="EAU-Cb-rIR" secondAttribute="trailing" constant="5" id="nOn-SO-8n6"/>
+                    <constraint firstItem="EAU-Cb-rIR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="z2J-4J-TAB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

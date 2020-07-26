@@ -9,22 +9,24 @@
 import Foundation
 import UIKit
 
-class SavedItemsCoordinator : NSObject, Coordinator, UINavigationControllerDelegate{
+class ItemsListCoordinator : NSObject, Coordinator, UINavigationControllerDelegate{
 
-    
+
+    weak var parentCoordinator : MainScreenCoordinator?
     var childCoordinators = [Coordinator]()
-
+    var modelArray : [DataGettable]
     var navigationController: UINavigationController
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, modelArray: [DataGettable]) {
         self.navigationController = navigationController
+        self.modelArray = modelArray
     }
     
     func start() {
-        let vc = SavedItemsViewController.instantiate()
+        let vc = ItemsListViewController.instantiate()
         navigationController.delegate = self
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         vc.coordinator = self
+        vc.modelArray = modelArray
         navigationController.pushViewController(vc, animated: false)
     }
 

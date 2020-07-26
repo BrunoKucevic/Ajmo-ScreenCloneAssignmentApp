@@ -119,15 +119,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F390F3FF-EBAA-4ADC-98D5-86471C84388B"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getData(callBack:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getData(pageNumber:callBack:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -141,9 +141,9 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/Services/AppDataHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getData(callBack:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getData(pageNumber:callBack:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -173,8 +173,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/CollectionTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -329,8 +329,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/ReusableCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "configure(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -345,8 +345,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/ReusableCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "configure(for:)"
             landmarkType = "7">
          </BreakpointContent>

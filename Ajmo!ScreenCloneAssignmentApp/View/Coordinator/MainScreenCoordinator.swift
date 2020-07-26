@@ -27,5 +27,32 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
+    
+    func goToList(_ items: [DataGettable]){
+        let child = ItemsListCoordinator(navigationController: navigationController, modelArray: items)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {return}
+        
+        if navigationController.viewControllers.contains(fromViewController){
+            return
+        }
+        
+        if let savedItemsCoordinator = fromViewController as? ItemsListViewController{
+            childDidFinish(savedItemsCoordinator.coordinator!)
+        }
+    }
+    
+    func childDidFinish(_ child: Coordinator){
+        for (index, coordinator) in childCoordinators.enumerated(){
+            if coordinator === child{
+                childCoordinators.remove(at: index)
+            }
+        }
+    }
 
 }

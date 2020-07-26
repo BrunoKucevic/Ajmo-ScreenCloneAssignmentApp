@@ -14,7 +14,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     static func nib() -> UINib{
         return UINib(nibName: "CollectionTableViewCell", bundle: nil)
     }
-    var models: [Data]?
+    var models: [DataGettable]?
     @IBOutlet var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -39,26 +39,28 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         flowLayout.scrollDirection = .horizontal
         flowLayout.sideItemScale = 0.8
         flowLayout.sideItemAlpha = 1.0
-        flowLayout.spacingMode = .fixed(spacing: 40.0)
+        flowLayout.spacingMode = .fixed(spacing: 30.0)
         collectionView.collectionViewLayout = flowLayout
         collectionView.showsHorizontalScrollIndicator = false
     }
     
-    func configure(for models: [Data]){
+    func configure(for models: [DataGettable]){
         self.models = models
         collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //ako nema models.count onda ide results<DataGettable>
         return models?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReusableCollectionViewCell.identifier, for: indexPath) as! ReusableCollectionViewCell
         if let safeModel = models?[indexPath.row] {
-            cell.configure(for: safeModel)
+            cell.configure(for: safeModel)//i tu bi isla moja klasa
         }else{
             print("error")
+            //tu ide configure(for Item)
         }
         
         return cell

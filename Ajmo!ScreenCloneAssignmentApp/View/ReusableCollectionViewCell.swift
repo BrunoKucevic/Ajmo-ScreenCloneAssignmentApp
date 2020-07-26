@@ -51,7 +51,7 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         //self.clipsToBounds = true
     }
     
-    public func configure(for model: Data){
+    public func configure(for model: DataGettable){//ovdje dodati sva polja u interfejs i umjesto data staviti DataGettable
         dontMissThis.isHidden = true
         self.title.text = model.title
         self.caption.text! = model.caption
@@ -61,11 +61,13 @@ class ReusableCollectionViewCell: UICollectionViewCell {
             self.dontMissThis.isHidden = false
         }
         
-        if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
-            self.linkType.text = "Event"
-        }else{
-            self.linkType.text = model.links[0].linkType.rawValue
-        }
+        
+        self.linkType.text = model.linkType
+//        if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
+//            self.linkType.text = "Event"
+//        }else{
+//            self.linkType.text = model.links[0].linkType.rawValue
+//        }
         self.createdAt.text = "Published: " + model.createdAt.toDay
         if let image = model.imageURL{
             self.imgView.downloaded(from: image)

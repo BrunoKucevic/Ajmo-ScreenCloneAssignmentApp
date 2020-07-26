@@ -33,9 +33,15 @@
 		93998D2224CAC80F00655BF3 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2124CAC80F00655BF3 /* UPCarouselFlowLayout.swift */; };
 		93998D2424CAD94C00655BF3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2324CAD94C00655BF3 /* String.swift */; };
 		93998D2724CC228100655BF3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2624CC228100655BF3 /* RealmService.swift */; };
-		93998D2924CC34B800655BF3 /* SavedItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2824CC34B800655BF3 /* SavedItemsViewController.swift */; };
-		93998D2B24CC34CD00655BF3 /* SavedItemsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93998D2A24CC34CD00655BF3 /* SavedItemsViewController.storyboard */; };
-		93998D2E24CC35B700655BF3 /* SavedItemsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2D24CC35B700655BF3 /* SavedItemsCoordinator.swift */; };
+		93998D2924CC34B800655BF3 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2824CC34B800655BF3 /* ItemsListViewController.swift */; };
+		93998D2B24CC34CD00655BF3 /* ItemsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93998D2A24CC34CD00655BF3 /* ItemsListViewController.storyboard */; };
+		93998D2E24CC35B700655BF3 /* ItemsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D2D24CC35B700655BF3 /* ItemsListCoordinator.swift */; };
+		93998D4324CCDC3A00655BF3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4224CCDC3A00655BF3 /* Item.swift */; };
+		93998D4524CD679D00655BF3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4424CD679D00655BF3 /* Helper.swift */; };
+		93998D4724CD689400655BF3 /* UIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4624CD689400655BF3 /* UIVIew.swift */; };
+		93998D4A24CDBFA400655BF3 /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4824CDBFA400655BF3 /* ItemListTableViewCell.swift */; };
+		93998D4B24CDBFA400655BF3 /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */; };
+		93998D4F24CDC9B500655BF3 /* DataGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4E24CDC9B500655BF3 /* DataGettable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,9 +75,15 @@
 		93998D2124CAC80F00655BF3 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		93998D2324CAD94C00655BF3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		93998D2624CC228100655BF3 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		93998D2824CC34B800655BF3 /* SavedItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsViewController.swift; sourceTree = "<group>"; };
-		93998D2A24CC34CD00655BF3 /* SavedItemsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedItemsViewController.storyboard; sourceTree = "<group>"; };
-		93998D2D24CC35B700655BF3 /* SavedItemsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsCoordinator.swift; sourceTree = "<group>"; };
+		93998D2824CC34B800655BF3 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
+		93998D2A24CC34CD00655BF3 /* ItemsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemsListViewController.storyboard; sourceTree = "<group>"; };
+		93998D2D24CC35B700655BF3 /* ItemsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListCoordinator.swift; sourceTree = "<group>"; };
+		93998D4224CCDC3A00655BF3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		93998D4424CD679D00655BF3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		93998D4624CD689400655BF3 /* UIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIew.swift; sourceTree = "<group>"; };
+		93998D4824CDBFA400655BF3 /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
+		93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
+		93998D4E24CDC9B500655BF3 /* DataGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGettable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,8 @@
 		9363211724C86F6C00C0F87A /* Ajmo!ScreenCloneAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				93998D4D24CDC99F00655BF3 /* Protocols */,
+				93998D4C24CDC3E200655BF3 /* Helper */,
 				93998D2524CB1F4C00655BF3 /* Third party helper */,
 				9363214B24C9B49F00C0F87A /* Services */,
 				9363214424C8ACDE00C0F87A /* Extension */,
@@ -137,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9363215224C9B76700C0F87A /* WhatsUpModel.swift */,
+				93998D4224CCDC3A00655BF3 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +165,8 @@
 				9363214124C8A9DC00C0F87A /* ReusableCollectionViewCell.xib */,
 				9363214724C96B0000C0F87A /* CollectionTableViewCell.swift */,
 				9363214824C96B0000C0F87A /* CollectionTableViewCell.xib */,
+				93998D4824CDBFA400655BF3 /* ItemListTableViewCell.swift */,
+				93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				9363213624C8762600C0F87A /* MainScreenViewController.swift */,
-				93998D2824CC34B800655BF3 /* SavedItemsViewController.swift */,
+				93998D2824CC34B800655BF3 /* ItemsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,7 +187,7 @@
 				9363213224C875A000C0F87A /* StoryBoarded.swift */,
 				9363213824C8A0B900C0F87A /* MainScreenCoordinator.swift */,
 				9363213A24C8A1DD00C0F87A /* MainTabBarController.swift */,
-				93998D2D24CC35B700655BF3 /* SavedItemsCoordinator.swift */,
+				93998D2D24CC35B700655BF3 /* ItemsListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -181,6 +198,7 @@
 				9363215424C9F54400C0F87A /* UIImageView.swift */,
 				93998D1F24CABF3800655BF3 /* Int.swift */,
 				93998D2324CAD94C00655BF3 /* String.swift */,
+				93998D4624CD689400655BF3 /* UIVIew.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,9 +226,25 @@
 			isa = PBXGroup;
 			children = (
 				9363213424C875D500C0F87A /* MainScreenViewController.storyboard */,
-				93998D2A24CC34CD00655BF3 /* SavedItemsViewController.storyboard */,
+				93998D2A24CC34CD00655BF3 /* ItemsListViewController.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		93998D4C24CDC3E200655BF3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				93998D4424CD679D00655BF3 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		93998D4D24CDC99F00655BF3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				93998D4E24CDC9B500655BF3 /* DataGettable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9DA76097B820B03F48E7AFE5 /* Frameworks */ = {
@@ -281,11 +315,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93998D4B24CDBFA400655BF3 /* ItemListTableViewCell.xib in Resources */,
 				9363212524C86F8A00C0F87A /* LaunchScreen.storyboard in Resources */,
 				9363214A24C96B0000C0F87A /* CollectionTableViewCell.xib in Resources */,
 				9363213524C875D500C0F87A /* MainScreenViewController.storyboard in Resources */,
 				9363212224C86F8A00C0F87A /* Assets.xcassets in Resources */,
-				93998D2B24CC34CD00655BF3 /* SavedItemsViewController.storyboard in Resources */,
+				93998D2B24CC34CD00655BF3 /* ItemsListViewController.storyboard in Resources */,
 				9363214324C8A9DC00C0F87A /* ReusableCollectionViewCell.xib in Resources */,
 				9363212024C86F6C00C0F87A /* Main.storyboard in Resources */,
 			);
@@ -347,20 +382,25 @@
 				9363213124C8756800C0F87A /* Coordinator.swift in Sources */,
 				93998D2724CC228100655BF3 /* RealmService.swift in Sources */,
 				9363213924C8A0B900C0F87A /* MainScreenCoordinator.swift in Sources */,
+				93998D4724CD689400655BF3 /* UIVIew.swift in Sources */,
 				93998D2024CABF3800655BF3 /* Int.swift in Sources */,
 				9363213B24C8A1DD00C0F87A /* MainTabBarController.swift in Sources */,
 				93998D2224CAC80F00655BF3 /* UPCarouselFlowLayout.swift in Sources */,
 				9363211D24C86F6C00C0F87A /* ViewController.swift in Sources */,
 				9363215524C9F54400C0F87A /* UIImageView.swift in Sources */,
 				9363214924C96B0000C0F87A /* CollectionTableViewCell.swift in Sources */,
-				93998D2924CC34B800655BF3 /* SavedItemsViewController.swift in Sources */,
-				93998D2E24CC35B700655BF3 /* SavedItemsCoordinator.swift in Sources */,
+				93998D2924CC34B800655BF3 /* ItemsListViewController.swift in Sources */,
+				93998D4F24CDC9B500655BF3 /* DataGettable.swift in Sources */,
+				93998D2E24CC35B700655BF3 /* ItemsListCoordinator.swift in Sources */,
 				9363213324C875A000C0F87A /* StoryBoarded.swift in Sources */,
+				93998D4A24CDBFA400655BF3 /* ItemListTableViewCell.swift in Sources */,
 				9363214F24C9B4F500C0F87A /* RequestError.swift in Sources */,
+				93998D4324CCDC3A00655BF3 /* Item.swift in Sources */,
 				9363215324C9B76700C0F87A /* WhatsUpModel.swift in Sources */,
 				9363211924C86F6C00C0F87A /* AppDelegate.swift in Sources */,
 				9363211B24C86F6C00C0F87A /* SceneDelegate.swift in Sources */,
 				9363213724C8762600C0F87A /* MainScreenViewController.swift in Sources */,
+				93998D4524CD679D00655BF3 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

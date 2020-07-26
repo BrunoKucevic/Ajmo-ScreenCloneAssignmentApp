@@ -11,14 +11,12 @@ import UIKit
 class MainTabBarController: UITabBarController {
 
     let mainCoord = MainScreenCoordinator(navigationController: UINavigationController())
-    let favoritesCoord = SavedItemsCoordinator(navigationController: UINavigationController())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mainCoord.start()
-        favoritesCoord.start()
-        viewControllers = [mainCoord.navigationController, favoritesCoord.navigationController]
+        viewControllers = [mainCoord.navigationController]
     }
 
 }
