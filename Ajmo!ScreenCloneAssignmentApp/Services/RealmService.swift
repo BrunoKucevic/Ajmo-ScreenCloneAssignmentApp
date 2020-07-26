@@ -47,4 +47,19 @@ class RealmService {
     func stopObservingErrorsForRealm(in vc : UIViewController){
         NotificationCenter.default.removeObserver(vc, name: NSNotification.Name("Realm error"), object: nil)
     }
+    
+    func saveItemEntity(_ data: DataGettable){
+        let item = Item()
+        item.title = data.title
+        item.caption = data.caption
+        item.linkType = data.linkType
+        item.createdAt = data.createdAt
+        item.imageURL = data.imageURL
+        item.datumDescription = data.datumDescription
+        item.isHighlighted = data.isHighlighted
+        item.picture = data.picture
+        
+        RealmService.shared.save(item)
+        
+    }
 }

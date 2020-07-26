@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,6 +18,7 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
     var apiResults = AppDataHandler()
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
+    var entityArray : Results<Item>?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +26,31 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
 
         table.delegate = self
         table.dataSource = self
-        
+        print("______--------------____________")
+        print(entityArray?.count)
+        print("______--------------____________")
         apiResults.getData(pageNumber: String(pageNumber)) { (models) in
             DispatchQueue.main.async {
                 models.forEach { (model) in
                     //tu bi dobili listu te klase
                     self.modelArray.append(model)
                     //save u bazu, override istih id-jeva
+                    //RealmService.shared.save(model)
+                    print(model)
+                    //RealmService.shared.saveItemEntity(model)
+                    let item = Item()
+                    item.title = model.title
+                    item.caption = model.caption
+                    item.linkType = model.linkType
+                    item.createdAt = model.createdAt
+                    item.imageURL = model.imageURL
+                    item.datumDescription = model.datumDescription
+                    item.isHighlighted = model.isHighlighted
+                    item.picture = model.picture
+                    
+                    RealmService.shared.save(item)
                 }
+
                 self.table.reloadData()
             }
         }

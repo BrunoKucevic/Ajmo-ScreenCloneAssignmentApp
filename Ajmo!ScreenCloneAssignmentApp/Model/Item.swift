@@ -37,6 +37,10 @@ class Item : Object, DataGettable{
     @objc dynamic var id : Int = 0
     
     @objc dynamic var color : String = ""
+    
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
 

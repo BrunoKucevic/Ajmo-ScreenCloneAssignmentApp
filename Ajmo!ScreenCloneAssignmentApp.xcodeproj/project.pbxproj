@@ -42,6 +42,7 @@
 		93998D4A24CDBFA400655BF3 /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4824CDBFA400655BF3 /* ItemListTableViewCell.swift */; };
 		93998D4B24CDBFA400655BF3 /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */; };
 		93998D4F24CDC9B500655BF3 /* DataGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4E24CDC9B500655BF3 /* DataGettable.swift */; };
+		93998D5124CE284E00655BF3 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		93998D4824CDBFA400655BF3 /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		93998D4E24CDC9B500655BF3 /* DataGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGettable.swift; sourceTree = "<group>"; };
+		93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				9363213424C875D500C0F87A /* MainScreenViewController.storyboard */,
 				93998D2A24CC34CD00655BF3 /* ItemsListViewController.storyboard */,
+				93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93998D5124CE284E00655BF3 /* DetailsViewController.storyboard in Resources */,
 				93998D4B24CDBFA400655BF3 /* ItemListTableViewCell.xib in Resources */,
 				9363212524C86F8A00C0F87A /* LaunchScreen.storyboard in Resources */,
 				9363214A24C96B0000C0F87A /* CollectionTableViewCell.xib in Resources */,
