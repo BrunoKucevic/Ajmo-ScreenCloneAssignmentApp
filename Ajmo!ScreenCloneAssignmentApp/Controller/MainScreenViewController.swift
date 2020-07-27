@@ -23,7 +23,7 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
         super.viewDidLoad()
         
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
-
+        
         table.delegate = self
         table.dataSource = self
         entityArray = RealmService.shared.realm.objects(Item.self)
@@ -33,7 +33,7 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
                     self.modelArray.append(model)
                     RealmService.shared.saveItemEntity(model)
                 }
-
+                
                 self.table.reloadData()
             }
         }
@@ -45,9 +45,7 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
-//        if let safeModelArray = modelArray {
-//            cell.configure(for: safeModelArray)
-//        }
+
         cell.configure(for: modelArray)
         return cell
     }
@@ -56,9 +54,9 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
         return 450.0
     }
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        <#code#>
-    //    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.goToDetails(modelArray[indexPath.row])
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         //view

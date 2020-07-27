@@ -16,8 +16,9 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var caption: UILabel!
     @IBOutlet weak var linkType: UILabel!
     @IBOutlet weak var createdAt: UILabel!
-    @IBOutlet weak var dontMissThis: UILabel!
     
+    @IBOutlet weak var viewImgView: UIImageView!
+    @IBOutlet weak var dontMissThisView: UIView!
     
     
     static let identifier = "ReusableCollectionViewCell"
@@ -46,19 +47,20 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         mainview.layer.shadowOpacity = 0.5
         //mainview.layer.masksToBounds = true
         imgView.layer.masksToBounds = true
-        dontMissThis.layer.cornerRadius = 20//dontMissThis.frame.height / 20
+        dontMissThisView.layer.cornerRadius = dontMissThisView.frame.height / 2
+        viewImgView.clipsToBounds = true
         
         //self.clipsToBounds = true
     }
     
     public func configure(for model: DataGettable){//ovdje dodati sva polja u interfejs i umjesto data staviti DataGettable
-        dontMissThis.isHidden = true
+        dontMissThisView.isHidden = true
         self.title.text = model.title
         self.caption.text! = model.caption
         
         
         if model.isHighlighted{
-            self.dontMissThis.isHidden = false
+            self.dontMissThisView.isHidden = false
         }
         
         

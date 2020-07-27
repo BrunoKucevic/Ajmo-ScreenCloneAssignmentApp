@@ -8,8 +8,10 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, StoryBoarded {
 
+    weak var coordinator : DetailsViewCoordinator?
+    var model : DataGettable?
     override func viewDidLoad() {
         super.viewDidLoad()
 

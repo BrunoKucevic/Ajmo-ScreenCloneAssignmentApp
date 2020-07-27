@@ -35,6 +35,13 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
         child.start()
     }
     
+    func goToDetails(_ item: DataGettable){
+        let child = DetailsViewCoordinator(navigationController: navigationController, model: item)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {return}
         

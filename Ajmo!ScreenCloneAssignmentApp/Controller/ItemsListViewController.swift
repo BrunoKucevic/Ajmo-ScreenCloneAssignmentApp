@@ -33,9 +33,6 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: ItemListTableViewCell.identifier, for: indexPath) as! ItemListTableViewCell
-        //        if let safeModelArray = modelArray?[indexPath.row]{
-        //            cell.configure(model: safeModelArray)
-        //        }
         cell.configure(model: modelArray[indexPath.row])
         return cell
     }
@@ -46,9 +43,7 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
             apiResults.getData(pageNumber: String(pageNumber)) { (models) in
                 DispatchQueue.main.async {
                     models.forEach { (model) in
-                        //tu bi dobili listu te klase
                         self.modelArray.append(model)
-                        //save u bazu, override istih id-jeva
                     }
                     self.table.reloadData()
                 }
