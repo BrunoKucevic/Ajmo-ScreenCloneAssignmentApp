@@ -15,7 +15,7 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
     var childCoordinators = [Coordinator]()
 
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -25,6 +25,7 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
         navigationController.delegate = self
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
         vc.coordinator = self
+        navigationController.navigationBar.backgroundColor = UIColor.colorSecond()
         navigationController.pushViewController(vc, animated: false)
     }
     

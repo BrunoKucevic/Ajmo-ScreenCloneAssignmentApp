@@ -45,6 +45,7 @@
 		93998D5124CE284E00655BF3 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */; };
 		93998D5324CEDB1400655BF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5224CEDB1400655BF3 /* DetailsViewController.swift */; };
 		93998D5524CEE36A00655BF3 /* DetailsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */; };
+		93998D5724CF5E0700655BF3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5624CF5E0700655BF3 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 		93998D5224CEDB1400655BF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCoordinator.swift; sourceTree = "<group>"; };
+		93998D5624CF5E0700655BF3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				93998D1F24CABF3800655BF3 /* Int.swift */,
 				93998D2324CAD94C00655BF3 /* String.swift */,
 				93998D4624CD689400655BF3 /* UIVIew.swift */,
+				93998D5624CF5E0700655BF3 /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				9363214224C8A9DC00C0F87A /* ReusableCollectionViewCell.swift in Sources */,
 				93998D5324CEDB1400655BF3 /* DetailsViewController.swift in Sources */,
 				9363215124C9B52100C0F87A /* AppDataHandler.swift in Sources */,
+				93998D5724CF5E0700655BF3 /* UIColor.swift in Sources */,
 				93998D5524CEE36A00655BF3 /* DetailsViewCoordinator.swift in Sources */,
 				9363214D24C9B4C600C0F87A /* JSONParser.swift in Sources */,
 				9363213124C8756800C0F87A /* Coordinator.swift in Sources */,

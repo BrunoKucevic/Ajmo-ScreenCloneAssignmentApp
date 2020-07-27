@@ -14,8 +14,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/CollectionTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "nib()"
-            landmarkType = "7">
+            landmarkName = "ReusableCollectionViewCell"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "3B01FFE3-4948-4446-B660-F13839E141B9 - ece5a24176387d9"
@@ -173,8 +173,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/CollectionTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -205,8 +205,8 @@
             filePath = "Ajmo!ScreenCloneAssignmentApp/View/CollectionTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "CollectionTableViewCell"
             landmarkType = "3">
             <Locations>

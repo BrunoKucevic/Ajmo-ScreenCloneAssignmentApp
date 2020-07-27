@@ -67,7 +67,12 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 300)
+        
+        let height = self.frame.size.height
+        let width = self.frame.size.width
+        // in case you you want the cell to be 40% of your controllers view
+        return CGSize(width: width * 0.7, height: height * 0.7)
+        //return CGSize(width: 300, height: 300)
     }
     
     
