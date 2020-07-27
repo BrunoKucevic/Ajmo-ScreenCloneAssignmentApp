@@ -50,6 +50,7 @@ class RealmService {
     
     func saveItemEntity(_ data: DataGettable){
         let item = Item()
+        item.id = data.id
         item.title = data.title
         item.caption = data.caption
         item.linkType = data.linkType

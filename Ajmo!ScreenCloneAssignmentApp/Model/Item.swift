@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class Item : Object, DataGettable{
+    
     @objc dynamic var linkType: String = ""
     
     @objc dynamic var imageURL: String?

@@ -21,6 +21,7 @@ class AppDataHandler{
             case .success(let model):
                 model.data.forEach { (data) in
                     let model = Helper()
+                    model.id = data.id
                     model.caption = data.caption
                     model.title = data.title
                     if !data.links[0].linkType.rawValue.isStringNilOrEmpty(){

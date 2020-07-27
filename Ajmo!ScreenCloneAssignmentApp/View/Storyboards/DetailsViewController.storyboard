@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="Ak9-Yg-KEi">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewController" id="yJd-zK-cfU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="yJd-zK-cfU" customClass="DetailsViewController" customModule="Ajmo_ScreenCloneAssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pav-wR-9JK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -43,6 +43,7 @@
 		93998D4B24CDBFA400655BF3 /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */; };
 		93998D4F24CDC9B500655BF3 /* DataGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D4E24CDC9B500655BF3 /* DataGettable.swift */; };
 		93998D5124CE284E00655BF3 /* DetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */; };
+		93998D5324CEDB1400655BF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5224CEDB1400655BF3 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		93998D4924CDBFA400655BF3 /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		93998D4E24CDC9B500655BF3 /* DataGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGettable.swift; sourceTree = "<group>"; };
 		93998D5024CE284E00655BF3 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
+		93998D5224CEDB1400655BF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				9363213624C8762600C0F87A /* MainScreenViewController.swift */,
 				93998D2824CC34B800655BF3 /* ItemsListViewController.swift */,
+				93998D5224CEDB1400655BF3 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			files = (
 				93998D2424CAD94C00655BF3 /* String.swift in Sources */,
 				9363214224C8A9DC00C0F87A /* ReusableCollectionViewCell.swift in Sources */,
+				93998D5324CEDB1400655BF3 /* DetailsViewController.swift in Sources */,
 				9363215124C9B52100C0F87A /* AppDataHandler.swift in Sources */,
 				9363214D24C9B4C600C0F87A /* JSONParser.swift in Sources */,
 				9363213124C8756800C0F87A /* Coordinator.swift in Sources */,

@@ -31,7 +31,7 @@ struct WhatsUpModel: Codable {
 
 // MARK: - Datum
 struct Data: Codable, DataGettable {
-    let id: Int = 0
+    let id: Int
     let links: [Link]
     let imageURL: String?
     let shareLink: String
@@ -50,20 +50,10 @@ struct Data: Codable, DataGettable {
 //    var picture: String
     
     var linkType: String{
-//        if let links = self.posterPath{
-//            return imgBaseUrl + posterPath
-//        }
-//
-//        else {return nil}
         return ""
     }
     
     var picture: String{
-//        if let posterPath = self.posterPath{
-//            return imgBaseUrlBig + posterPath
-//        }
-//
-//        else {return nil}
         return ""
     }
 
