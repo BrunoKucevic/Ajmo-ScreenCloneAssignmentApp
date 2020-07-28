@@ -36,17 +36,11 @@ class MainScreenViewController: UIViewController, StoryBoarded {
                 self.table.reloadData()
             }
         }
-    }
-    
-    
+    } 
 }
 
-
 extension MainScreenViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 450.0
     }
@@ -86,8 +80,6 @@ extension MainScreenViewController: UITableViewDelegate{
         btn.anchor(top: view.topAnchor, leading: nil, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 12, right: 20), size: .init(width: 50, height: 0))
         
         return view
-        
-        
     }
     
     @objc func btnClicked(){
@@ -97,11 +89,17 @@ extension MainScreenViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50.0
     }
-    
-    
 }
 
 extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
+    
+    func raiseAlert() {
+        self.showAlertController(title: "Error", message: "No connection or empty database")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
@@ -114,7 +112,7 @@ extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
             if let entity = entityArray{
                 cell.configure(for: entity.reversed())
             }else{
-                print("No connection or empty database")
+                self.showAlertController(title: "Error", message: "No connection or empty database")
             }
         }
         return cell
@@ -127,9 +125,8 @@ extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
             if let entity = entityArray {
                 coordinator?.goToDetails(entity[indexPath.row])
             }else{
-                print("No connection or empty database")
+                self.showAlertController(title: "Error", message: "No connection or empty database")
             }
-            
         }
     }
 }

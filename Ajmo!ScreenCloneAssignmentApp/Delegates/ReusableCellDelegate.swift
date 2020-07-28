@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ReusableCellDelegate {
     func cellClicked(_ indexPath: IndexPath)
+    func raiseAlert()
 }
+

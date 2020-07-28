@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CollectionTableViewCell: UITableViewCell{
     
-
+    
     static let identifier = "CollectionTableViewCell"
     static func nib() -> UINib{
         return UINib(nibName: "CollectionTableViewCell", bundle: nil)
@@ -26,11 +26,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         setupFlowLayout()
-
+        
     }
-    
-    
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -50,6 +47,22 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         self.models = models
         collectionView.reloadData()
     }
+}
+
+extension CollectionTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let cell = collectionView.cellForItem(at: indexPath) else {return}
+        cell.alpha = 0.8
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            cell.alpha = 1
+        }
+        collectionView.deselectItem(at: indexPath, animated: true)
+        delegate?.cellClicked(indexPath)
+    }
+}
+
+extension CollectionTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models?.count ?? 0
@@ -60,14 +73,12 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         if let safeModel = models?[indexPath.row] {
             cell.configure(for: safeModel)
         }else{
-            print("error")
+            delegate?.raiseAlert()
         }
         
         return cell
     }
     
-
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let height = self.frame.size.height
@@ -75,20 +86,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         return CGSize(width: width * 0.7, height: height * 0.7)
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 0, left: 35, bottom: 0, right: 35)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        guard let cell = collectionView.cellForItem(at: indexPath) else {return}
-        cell.alpha = 0.8
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            cell.alpha = 1
-        }
-        collectionView.deselectItem(at: indexPath, animated: true)
-        delegate?.cellClicked(indexPath)
     }
 }

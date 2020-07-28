@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelegate, UITableViewDataSource {
+class ItemsListViewController: UIViewController, StoryBoarded {
     
     @IBOutlet weak var table: UITableView!
     weak var coordinator : ItemsListCoordinator?
@@ -25,16 +25,21 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         table.rowHeight = 300
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return modelArray.count
-    }
-    
+}
+
+extension ItemsListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: ItemListTableViewCell.identifier, for: indexPath) as! ItemListTableViewCell
         cell.configure(model: modelArray[indexPath.row])
         return cell
     }
+}
+
+extension ItemsListViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return modelArray.count
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if indexPath.row == modelArray.count - 1{
@@ -50,9 +55,8 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
             }
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
-    
-    
 }

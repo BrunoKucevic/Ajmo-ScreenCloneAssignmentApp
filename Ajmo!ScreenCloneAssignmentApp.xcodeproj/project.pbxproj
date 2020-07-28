@@ -47,6 +47,7 @@
 		93998D5524CEE36A00655BF3 /* DetailsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */; };
 		93998D5724CF5E0700655BF3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5624CF5E0700655BF3 /* UIColor.swift */; };
 		93998D5B24D03ED600655BF3 /* ReusableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */; };
+		93998D5D24D0753600655BF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5C24D0753600655BF3 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCoordinator.swift; sourceTree = "<group>"; };
 		93998D5624CF5E0700655BF3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellDelegate.swift; sourceTree = "<group>"; };
+		93998D5C24D0753600655BF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				93998D2324CAD94C00655BF3 /* String.swift */,
 				93998D4624CD689400655BF3 /* UIVIew.swift */,
 				93998D5624CF5E0700655BF3 /* UIColor.swift */,
+				93998D5C24D0753600655BF3 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				93998D4324CCDC3A00655BF3 /* Item.swift in Sources */,
 				9363215324C9B76700C0F87A /* WhatsUpModel.swift in Sources */,
 				9363211924C86F6C00C0F87A /* AppDelegate.swift in Sources */,
+				93998D5D24D0753600655BF3 /* UIViewController.swift in Sources */,
 				9363211B24C86F6C00C0F87A /* SceneDelegate.swift in Sources */,
 				9363213724C8762600C0F87A /* MainScreenViewController.swift in Sources */,
 				93998D4524CD679D00655BF3 /* Helper.swift in Sources */,
