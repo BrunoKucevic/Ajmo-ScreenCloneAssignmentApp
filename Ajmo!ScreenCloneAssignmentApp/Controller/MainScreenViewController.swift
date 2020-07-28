@@ -18,6 +18,7 @@ class MainScreenViewController: UIViewController, StoryBoarded {
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
     var entityArray : Results<Item>?
+    var noInternet : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +27,20 @@ class MainScreenViewController: UIViewController, StoryBoarded {
         
         table.delegate = self
         table.dataSource = self
-        entityArray = RealmService.shared.realm.objects(Item.self)
-        apiResults.getData(pageNumber: String(pageNumber)) { (models) in
-            DispatchQueue.main.async {
-                models.forEach { (model) in
-                    self.modelArray.append(model)
-                    RealmService.shared.saveItemEntity(model)
+        entityArray = RealmService.shared.realm.objects(Item.self).sorted(byKeyPath: "id", ascending: true)
+        //entityArray = RealmService.shared.realm.objects(Item.self)
+        if noInternet == false{
+            apiResults.getData(pageNumber: String(pageNumber)) { (models) in
+                DispatchQueue.main.async {
+                    models.forEach { (model) in
+                        self.modelArray.append(model)
+                        RealmService.shared.saveItemEntity(model)
+                    }
+                    self.table.reloadData()
                 }
-                self.table.reloadData()
             }
         }
+
     } 
 }
 
@@ -83,7 +88,15 @@ extension MainScreenViewController: UITableViewDelegate{
     }
     
     @objc func btnClicked(){
-        coordinator?.goToList(modelArray)
+        if modelArray.count != 0{
+            coordinator?.goToList(modelArray)
+        }else{
+            if let entity = entityArray{
+                coordinator?.goToList(entity.reversed())
+            }else{
+                self.showAlertController(title: "Error", message: "No connection or empty database")
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -105,10 +118,10 @@ extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         cell.delegate = self
         cell.configure(for: modelArray)
-        if modelArray.count != 0 {
+        
+        if modelArray.count != 0{
             cell.configure(for: modelArray)
         }else{
-            
             if let entity = entityArray{
                 cell.configure(for: entity.reversed())
             }else{

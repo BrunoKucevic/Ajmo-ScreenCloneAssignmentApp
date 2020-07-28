@@ -15,6 +15,7 @@ class ItemsListViewController: UIViewController, StoryBoarded {
     var apiResults = AppDataHandler()
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
+    var noInternet = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,18 +46,21 @@ extension ItemsListViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        if indexPath.row == modelArray.count - 1{
-            pageNumber = pageNumber + 1
-            apiResults.getData(pageNumber: String(pageNumber)) { (models) in
-                DispatchQueue.main.async {
-                    models.forEach { (model) in
-                        self.modelArray.append(model)
-                        RealmService.shared.saveItemEntity(model)
+        if noInternet == false{
+            if indexPath.row == modelArray.count - 1{
+                pageNumber = pageNumber + 1
+                apiResults.getData(pageNumber: String(pageNumber)) { (models) in
+                    DispatchQueue.main.async {
+                        models.forEach { (model) in
+                            self.modelArray.append(model)
+                            RealmService.shared.saveItemEntity(model)
+                        }
+                        self.table.reloadData()
                     }
-                    self.table.reloadData()
                 }
             }
         }
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

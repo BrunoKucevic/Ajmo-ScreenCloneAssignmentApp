@@ -26,6 +26,7 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
         vc.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
         vc.coordinator = self
         navigationController.navigationBar.backgroundColor = UIColor.colorSecond()
+        navigationController.title = "Discover"
         navigationController.pushViewController(vc, animated: false)
     }
     
