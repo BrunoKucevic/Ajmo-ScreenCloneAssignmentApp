@@ -10,6 +10,7 @@ import UIKit
 
 class ItemListTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var dontMissThis: UIView!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var title: UILabel!
@@ -25,6 +26,7 @@ class ItemListTableViewCell: UITableViewCell {
         cellView.layer.cornerRadius = cellView.frame.height / 20
         imgView.layer.cornerRadius = imgView.frame.height / 20
         imgView.clipsToBounds = true
+        dontMissThis.layer.cornerRadius = dontMissThis.frame.height / 2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,14 +34,14 @@ class ItemListTableViewCell: UITableViewCell {
     }
     
     public func configure(model: DataGettable){
-        //dontMissThis.isHidden = true
+        dontMissThis.isHidden = true
         self.title.text = model.title
         
         
         
-//        if model.isHighlighted{
-//            self.dontMissThis.isHidden = false
-//        }
+        if model.isHighlighted{
+            self.dontMissThis.isHidden = false
+        }
         self.linkType.text = model.linkType
 
         self.createdAt.text = "Published: " + model.createdAt.toDay

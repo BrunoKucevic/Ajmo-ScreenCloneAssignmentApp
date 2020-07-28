@@ -28,9 +28,12 @@ class ItemsListViewController: UIViewController, StoryBoarded {
 }
 
 extension ItemsListViewController: UITableViewDataSource{
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: ItemListTableViewCell.identifier, for: indexPath) as! ItemListTableViewCell
         cell.configure(model: modelArray[indexPath.row])
+        //cell.delegate
         return cell
     }
 }
@@ -57,6 +60,7 @@ extension ItemsListViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator?.goToDetails(modelArray[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }

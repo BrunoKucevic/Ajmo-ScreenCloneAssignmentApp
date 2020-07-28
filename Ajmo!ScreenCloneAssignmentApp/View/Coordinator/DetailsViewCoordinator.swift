@@ -13,6 +13,7 @@ class DetailsViewCoordinator : NSObject, Coordinator, UINavigationControllerDele
 
 
     weak var parentCoordinator : MainScreenCoordinator?
+    weak var parentCoordinator2 : ItemsListCoordinator?
     var childCoordinators = [Coordinator]()
     var model : DataGettable
     var navigationController: UINavigationController

@@ -17,6 +17,8 @@ class DetailsViewController: UIViewController, StoryBoarded {
     @IBOutlet weak var event: UILabel!
     @IBOutlet weak var createdAt: UILabel!
     weak var coordinator : DetailsViewCoordinator?
+//    weak var parentCoordinator : MainScreenCoordinator?
+//    weak var parentCoordinator2 : ItemsListCoordinator?
     var model : DataGettable?
     override func viewDidLoad() {
         super.viewDidLoad()
