@@ -9,8 +9,7 @@
 import UIKit
 import RealmSwift
 
-class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDelegate, UITableViewDataSource {
-    
+class MainScreenViewController: UIViewController, StoryBoarded {
     
     @IBOutlet var table: UITableView!
     
@@ -19,6 +18,7 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
     var entityArray : Results<Item>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,21 +33,18 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
                     self.modelArray.append(model)
                     RealmService.shared.saveItemEntity(model)
                 }
-                
                 self.table.reloadData()
             }
         }
     }
     
+    
+}
+
+
+extension MainScreenViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
-
-        cell.configure(for: modelArray)
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,7 +52,15 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.goToDetails(modelArray[indexPath.row])
+        if modelArray.count != 0 {
+            coordinator?.goToDetails(modelArray[indexPath.row])
+        }else{
+            if let entity = entityArray {
+                coordinator?.goToDetails(entity[indexPath.row])
+            }else{
+                print("No connection or empty database")
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -92,5 +97,39 @@ class MainScreenViewController: UIViewController, StoryBoarded, UITableViewDeleg
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50.0
     }
+    
+    
 }
 
+extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
+        cell.delegate = self
+        cell.configure(for: modelArray)
+        if modelArray.count != 0 {
+            cell.configure(for: modelArray)
+        }else{
+            
+            if let entity = entityArray{
+                cell.configure(for: entity.reversed())
+            }else{
+                print("No connection or empty database")
+            }
+        }
+        return cell
+    }
+    
+    func cellClicked(_ indexPath: IndexPath) {
+        if modelArray.count != 0 {
+            coordinator?.goToDetails(modelArray[indexPath.row])
+        }else{
+            if let entity = entityArray {
+                coordinator?.goToDetails(entity[indexPath.row])
+            }else{
+                print("No connection or empty database")
+            }
+            
+        }
+    }
+}

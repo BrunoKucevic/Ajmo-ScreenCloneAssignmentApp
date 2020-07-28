@@ -46,6 +46,7 @@
 		93998D5324CEDB1400655BF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5224CEDB1400655BF3 /* DetailsViewController.swift */; };
 		93998D5524CEE36A00655BF3 /* DetailsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */; };
 		93998D5724CF5E0700655BF3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5624CF5E0700655BF3 /* UIColor.swift */; };
+		93998D5B24D03ED600655BF3 /* ReusableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		93998D5224CEDB1400655BF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		93998D5424CEE36A00655BF3 /* DetailsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCoordinator.swift; sourceTree = "<group>"; };
 		93998D5624CF5E0700655BF3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		9363211724C86F6C00C0F87A /* Ajmo!ScreenCloneAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				93998D5924D03EBB00655BF3 /* Delegates */,
 				93998D4D24CDC99F00655BF3 /* Protocols */,
 				93998D4C24CDC3E200655BF3 /* Helper */,
 				93998D2524CB1F4C00655BF3 /* Third party helper */,
@@ -257,6 +260,14 @@
 				93998D4E24CDC9B500655BF3 /* DataGettable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		93998D5924D03EBB00655BF3 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		9DA76097B820B03F48E7AFE5 /* Frameworks */ = {
@@ -411,6 +422,7 @@
 				9363213324C875A000C0F87A /* StoryBoarded.swift in Sources */,
 				93998D4A24CDBFA400655BF3 /* ItemListTableViewCell.swift in Sources */,
 				9363214F24C9B4F500C0F87A /* RequestError.swift in Sources */,
+				93998D5B24D03ED600655BF3 /* ReusableCellDelegate.swift in Sources */,
 				93998D4324CCDC3A00655BF3 /* Item.swift in Sources */,
 				9363215324C9B76700C0F87A /* WhatsUpModel.swift in Sources */,
 				9363211924C86F6C00C0F87A /* AppDelegate.swift in Sources */,

@@ -24,7 +24,6 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
         table.dataSource = self
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         table.rowHeight = 300
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,6 +43,7 @@ class ItemsListViewController: UIViewController, StoryBoarded, UITableViewDelega
                 DispatchQueue.main.async {
                     models.forEach { (model) in
                         self.modelArray.append(model)
+                        RealmService.shared.saveItemEntity(model)
                     }
                     self.table.reloadData()
                 }

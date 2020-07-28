@@ -33,8 +33,6 @@ class ReusableCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        //self.imgView.image = nil
-        //self.linkType.text = "event"
     }
     
     private func setup(){
@@ -45,31 +43,21 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         mainview.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         mainview.layer.shadowRadius = 2.0
         mainview.layer.shadowOpacity = 0.5
-        //mainview.layer.masksToBounds = true
         imgView.layer.masksToBounds = true
         dontMissThisView.layer.cornerRadius = dontMissThisView.frame.height / 2
         viewImgView.clipsToBounds = true
-        
-        //self.clipsToBounds = true
     }
     
-    public func configure(for model: DataGettable){//ovdje dodati sva polja u interfejs i umjesto data staviti DataGettable
+    public func configure(for model: DataGettable){
         dontMissThisView.isHidden = true
         self.title.text = model.title
         self.caption.text! = model.caption
-        
         
         if model.isHighlighted{
             self.dontMissThisView.isHidden = false
         }
         
-        
         self.linkType.text = model.linkType
-//        if model.links[0].linkType.rawValue.isStringNilOrEmpty(){
-//            self.linkType.text = "Event"
-//        }else{
-//            self.linkType.text = model.links[0].linkType.rawValue
-//        }
         self.createdAt.text = "Published: " + model.createdAt.toDay
         if let image = model.imageURL{
             self.imgView.downloaded(from: image)
@@ -77,6 +65,5 @@ class ReusableCollectionViewCell: UICollectionViewCell {
         else {
             self.imgView.image = UIImage(named: "default")
         }
-        
     }
 }

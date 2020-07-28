@@ -19,11 +19,7 @@ extension Int {
     var dateFull: Date {
         return Date(timeIntervalSince1970: Double(self))
     }
-    var toHour: String {
-        return formatType(form: "HH:mm").string(from: dateFull)
-    }
     var toDay: String {
         return formatType(form: "dd.MM.yyyy").string(from: dateFull)
-//        return formatType(form: "MM/dd/yyyy").string(from: dateFull)
     }
 }
