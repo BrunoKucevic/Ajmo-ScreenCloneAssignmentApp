@@ -23,7 +23,7 @@ class MainScreenCoordinator : NSObject, Coordinator, UINavigationControllerDeleg
     func start() {
         let vc = MainScreenViewController.instantiate()
         navigationController.delegate = self
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
+        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         vc.coordinator = self
         navigationController.navigationBar.backgroundColor = UIColor.colorSecond()
         navigationController.pushViewController(vc, animated: false)
