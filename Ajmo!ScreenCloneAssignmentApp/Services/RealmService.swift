@@ -53,7 +53,11 @@ class RealmService {
         item.id = data.id
         item.title = data.title
         item.caption = data.caption
-        item.linkType = data.linkType
+        if data.linkType == "Empty"{
+            item.linkType = "event"
+        }else{
+            item.linkType = data.linkType
+        }
         item.createdAt = data.createdAt
         item.imageURL = data.imageURL
         item.datumDescription = data.datumDescription

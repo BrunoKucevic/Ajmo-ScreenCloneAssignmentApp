@@ -48,6 +48,7 @@
 		93998D5724CF5E0700655BF3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5624CF5E0700655BF3 /* UIColor.swift */; };
 		93998D5B24D03ED600655BF3 /* ReusableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */; };
 		93998D5D24D0753600655BF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5C24D0753600655BF3 /* UIViewController.swift */; };
+		93998D5F24D1682B00655BF3 /* APIErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93998D5E24D1682B00655BF3 /* APIErrorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		93998D5624CF5E0700655BF3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellDelegate.swift; sourceTree = "<group>"; };
 		93998D5C24D0753600655BF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		93998D5E24D1682B00655BF3 /* APIErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				93998D5A24D03ED600655BF3 /* ReusableCellDelegate.swift */,
+				93998D5E24D1682B00655BF3 /* APIErrorDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				93998D2224CAC80F00655BF3 /* UPCarouselFlowLayout.swift in Sources */,
 				9363211D24C86F6C00C0F87A /* ViewController.swift in Sources */,
 				9363215524C9F54400C0F87A /* UIImageView.swift in Sources */,
+				93998D5F24D1682B00655BF3 /* APIErrorDelegate.swift in Sources */,
 				9363214924C96B0000C0F87A /* CollectionTableViewCell.swift in Sources */,
 				93998D2924CC34B800655BF3 /* ItemsListViewController.swift in Sources */,
 				93998D4F24CDC9B500655BF3 /* DataGettable.swift in Sources */,

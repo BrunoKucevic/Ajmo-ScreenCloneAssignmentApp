@@ -18,61 +18,61 @@ class MainScreenViewController: UIViewController, StoryBoarded {
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
     var entityArray : Results<Item>?
-    var noInternet : Bool = false
+    var finishedLoading : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
-        
+        apiResults.delegate = self
         table.delegate = self
         table.dataSource = self
-        entityArray = RealmService.shared.realm.objects(Item.self).sorted(byKeyPath: "id", ascending: true)
-        //entityArray = RealmService.shared.realm.objects(Item.self)
-        if noInternet == false{
-            apiResults.getData(pageNumber: String(pageNumber)) { (models) in
-                DispatchQueue.main.async {
-                    models.forEach { (model) in
-                        self.modelArray.append(model)
-                        RealmService.shared.saveItemEntity(model)
+        entityArray = RealmService.shared.realm.objects(Item.self)
+        apiResults.getData(pageNumber: String(pageNumber)) { (models, loaded) in
+            DispatchQueue.main.async {
+                models.forEach { (model) in
+                    self.modelArray.append(model)
+                    RealmService.shared.saveItemEntity(model)
+                    if loaded{
+                        self.checkForModelCount()
                     }
-                    self.table.reloadData()
                 }
+                self.table.reloadData()
             }
         }
-
     } 
 }
 
-extension MainScreenViewController: UITableViewDelegate{
-
+// MARK: - MainScreenViewController: UITableViewDelegate, APIErrorDelegate
+extension MainScreenViewController: UITableViewDelegate, APIErrorDelegate{
+    
+    func getError(error: String) {
+        DispatchQueue.main.async {
+            self.checkForModelCount()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 450.0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if modelArray.count != 0 {
-            coordinator?.goToDetails(modelArray[indexPath.row])
-        }else{
-            if let entity = entityArray {
-                coordinator?.goToDetails(entity[indexPath.row])
-            }else{
-                print("No connection or empty database")
-            }
+    func checkForModelCount(){
+        if self.modelArray.count == 0 {
+            self.showNoDataAlert()
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        //view
+        
         let view = UIView()
         view.backgroundColor = .clear
-        //label
+        
         let label = UILabel()
         label.text = "What's up"
         label.textColor = .black
         label.font = UIFont(name: "Helvetica Neue", size: 20)
         view.addSubview(label)
-        //button
+        
         let btn = UIButton()
         btn.backgroundColor = .clear
         btn.setTitle("All news", for: .normal)
@@ -80,7 +80,7 @@ extension MainScreenViewController: UITableViewDelegate{
         btn.setTitleColor(.black, for: .normal)
         btn.addTarget(self, action: #selector(self.btnClicked), for: .touchUpInside)
         view.addSubview(btn)
-        //constraints
+        
         label.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: nil, padding: .init(top: 12, left: 20, bottom: 12, right: 0))
         btn.anchor(top: view.topAnchor, leading: nil, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 12, left: 0, bottom: 12, right: 20), size: .init(width: 50, height: 0))
         
@@ -92,9 +92,11 @@ extension MainScreenViewController: UITableViewDelegate{
             coordinator?.goToList(modelArray)
         }else{
             if let entity = entityArray{
-                coordinator?.goToList(entity.reversed())
-            }else{
-                self.showAlertController(title: "Error", message: "No connection or empty database")
+                if entity.count != 0 {
+                    coordinator?.goToList(entity.reversed())
+                }else{
+                    self.showAlertController(title: "Error", message: "Nothing to show here due to bad or no internet connection and empty database")
+                }
             }
         }
     }
@@ -104,10 +106,11 @@ extension MainScreenViewController: UITableViewDelegate{
     }
 }
 
+// MARK: - MainScreenViewController: UITableViewDataSource, ReusableCellDelegate
 extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
     
     func raiseAlert() {
-        self.showAlertController(title: "Error", message: "No connection or empty database")
+        self.showNoDataAlert()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,15 +120,15 @@ extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         cell.delegate = self
-        cell.configure(for: modelArray)
         
         if modelArray.count != 0{
             cell.configure(for: modelArray)
-        }else{
+        }
+        else{
             if let entity = entityArray{
-                cell.configure(for: entity.reversed())
-            }else{
-                self.showAlertController(title: "Error", message: "No connection or empty database")
+                if entity.count != 0 {
+                    cell.configure(for: entity.reversed())
+                }
             }
         }
         return cell
@@ -136,9 +139,7 @@ extension MainScreenViewController: UITableViewDataSource, ReusableCellDelegate{
             coordinator?.goToDetails(modelArray[indexPath.row])
         }else{
             if let entity = entityArray {
-                coordinator?.goToDetails(entity[indexPath.row])
-            }else{
-                self.showAlertController(title: "Error", message: "No connection or empty database")
+                coordinator?.goToDetails(entity.reversed()[indexPath.row])
             }
         }
     }

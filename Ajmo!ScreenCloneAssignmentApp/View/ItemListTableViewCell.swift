@@ -36,20 +36,16 @@ class ItemListTableViewCell: UITableViewCell {
     public func configure(model: DataGettable){
         dontMissThis.isHidden = true
         self.title.text = model.title
-        
-        
-        
         if model.isHighlighted{
             self.dontMissThis.isHidden = false
         }
         self.linkType.text = model.linkType
-
         self.createdAt.text = "Published: " + model.createdAt.toDay
         if let image = model.imageURL{
             self.imgView.downloaded(from: image)
-        }
-        else {
+        }else {
             self.imgView.image = UIImage(named: "default")
         }
+        
     }
 }

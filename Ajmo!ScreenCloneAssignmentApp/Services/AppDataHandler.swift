@@ -14,8 +14,9 @@ class AppDataHandler{
     var dataList = [Helper]()
     var urlbase1 = "https://api.ajmo.hr/v3/news/index?isPromoted=0&page="
     var urlBase2 = "&perPage=10"
+    var delegate : APIErrorDelegate?
     
-    func getData(pageNumber: String, callBack: @escaping ([DataGettable]) -> Void){
+    func getData(pageNumber: String, callBack: @escaping ([DataGettable], Bool) -> Void){
         JSONParser.shared.fetch(urlString: urlbase1 + pageNumber + urlBase2) { (result: Result<WhatsUpModel, RequestError>) in
             switch result{
             case .success(let model):
@@ -27,7 +28,7 @@ class AppDataHandler{
                     if !data.links[0].linkType.rawValue.isStringNilOrEmpty(){
                         model.linkType = data.links[0].linkType.rawValue
                     }else{
-                         model.linkType = "Empty"
+                         model.linkType = "event"
                     }
                     model.createdAt = data.createdAt
                     model.imageURL = data.imageURL
@@ -40,8 +41,9 @@ class AppDataHandler{
 
                     self.dataList.append(model)
                 }
-                callBack(self.dataList)
+                callBack(self.dataList, true)
             case .failure(let error):
+                self.delegate?.getError(error: error.localizedDescription)
                 print(error.localizedDescription)
             }
         }

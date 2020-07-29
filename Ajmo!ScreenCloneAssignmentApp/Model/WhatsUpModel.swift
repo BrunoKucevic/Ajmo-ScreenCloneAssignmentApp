@@ -7,14 +7,6 @@
 //
 
 import Foundation
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let whatsUpModel = try? newJSONDecoder().decode(WhatsUpModel.self, from: jsonData)
-
-import Foundation
-
 // MARK: - WhatsUpModel
 struct WhatsUpModel: Codable {
     let success: Bool
@@ -46,8 +38,6 @@ struct Data: Codable, DataGettable {
     let highlightedGradientColorFirst: HighlightedGradientColorFirst
     let highlightedGradientColorSecond: HighlightedGradientColorSecond
     let title, datumDescription: String
-//    var linkType : String
-//    var picture: String
     
     var linkType: String{
         return ""

@@ -15,7 +15,6 @@ class ItemsListViewController: UIViewController, StoryBoarded {
     var apiResults = AppDataHandler()
     var modelArray = [DataGettable]()
     var pageNumber : Int = 1
-    var noInternet = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +27,18 @@ class ItemsListViewController: UIViewController, StoryBoarded {
     }
 }
 
+// MARK: - ItemsListViewController: UITableViewDataSource
 extension ItemsListViewController: UITableViewDataSource{
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: ItemListTableViewCell.identifier, for: indexPath) as! ItemListTableViewCell
         cell.configure(model: modelArray[indexPath.row])
-        //cell.delegate
         return cell
     }
 }
 
+// MARK: - ItemsListViewController: UITableViewDataSource
 extension ItemsListViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelArray.count
@@ -46,21 +46,18 @@ extension ItemsListViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        if noInternet == false{
-            if indexPath.row == modelArray.count - 1{
-                pageNumber = pageNumber + 1
-                apiResults.getData(pageNumber: String(pageNumber)) { (models) in
-                    DispatchQueue.main.async {
-                        models.forEach { (model) in
-                            self.modelArray.append(model)
-                            RealmService.shared.saveItemEntity(model)
-                        }
-                        self.table.reloadData()
+        if indexPath.row == modelArray.count - 1{
+            pageNumber = pageNumber + 1
+            apiResults.getData(pageNumber: String(pageNumber)) { (models, loaded) in
+                DispatchQueue.main.async {
+                    models.forEach { (model) in
+                        self.modelArray.append(model)
+                        RealmService.shared.saveItemEntity(model)
                     }
+                    self.table.reloadData()
                 }
             }
         }
-
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
